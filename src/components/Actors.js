@@ -5,6 +5,11 @@ const Actors = () => {
   return (
     <div>
       <h1>Actors Page</h1>
+      { actors.map(actor =>
+      <div>{actor.name}
+        <ul>{actor.movies.map(m =><li>{m}</li>)}</ul>
+      </div>)
+      }
     </div>
   );
 };

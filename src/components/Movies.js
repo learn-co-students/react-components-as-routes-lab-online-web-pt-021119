@@ -6,7 +6,12 @@ const Movies = () => {
   return (
     <div>
       <h1>Movies Page</h1>
-      { movies.map(movie => <div>{movie.title} | {movie.time} | {movie.genres} | {movie.metascore} </div>) }
+      { movies.map(movie =>
+        <div>{movie.title} | {movie.time} | {movie.metascore}
+          {<ul>
+            {movie.genres.map(genre => <li>{genre}</li>)}
+          </ul>}
+      </div>) }
     </div>
   );
 };
